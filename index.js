@@ -15,20 +15,33 @@
 // const app = express();
 
 // app.get("/", (req, res) => {
-//   res.send("Hello world");
+//   res.send("Hello world!");
 // });
 
 // app.listen(8085);
 
-//Server Express cu continut static
+//Exercitiu
+//intram pe localhost 8080 si apelam ping, sa ne apara pong
 const express = require("express");
+const req = require("express/lib/request");
 
 const app = express();
 
-app.use(express.static(__dirname + "/public"));
-
-app.get("/", (req, res) => {
-  res.send("Hello world");
+app.get("/ping", (req, res) => {
+  res.send("pong");
 });
 
 app.listen(8085);
+
+//Server Express cu continut static
+// const express = require("express");
+
+// const app = express();
+
+// app.use(express.static(__dirname + "/public"));
+
+// app.get("/", (req, res) => {
+//   res.send("Hello world");
+// });
+
+// app.listen(8085);
